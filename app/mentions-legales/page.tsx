@@ -32,7 +32,7 @@ export default function Mentions() {
             <p>Code APE/NAF : {l.ape}.</p>
             <p>N° TVA intracommunautaire : {l.tva}.</p>
             <p>Directeur de la publication : {l.director}.</p>
-            <p>Téléphone : {site.contact.phone} · Email : {site.contact.email}.</p>
+            <p>Email : {site.contact.email}.</p>
           </Block>
           <Block title="Assurance">
             <p>Responsabilité civile décennale souscrite auprès de {l.insurer} — contrat « {l.insuranceContract} ». Activités garanties : terrassement, électricité-télécommunications, réseaux souterrains, télécommunication / vidéocommunication. Couverture : France métropolitaine et DROM.</p>

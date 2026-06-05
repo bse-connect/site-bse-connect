@@ -28,7 +28,6 @@ const jsonLd = {
   name: "BSE Connect",
   description: site.description,
   url: site.url,
-  telephone: "+33659895122",
   email: site.contact.email,
   areaServed: "Île-de-France",
   address: {

@@ -27,10 +27,6 @@ export default function Contact() {
               <h2 className="font-display text-lg font-semibold">Coordonnées</h2>
               <ul className="mt-5 space-y-4 text-sm">
                 <li>
-                  <div className="text-ink-faint">Téléphone</div>
-                  <a href={site.contact.phoneHref} className="text-ink hover:text-brand-bright">{site.contact.phone}</a>
-                </li>
-                <li>
                   <div className="text-ink-faint">Email</div>
                   <a href={"mailto:" + site.contact.email} className="text-ink hover:text-brand-bright">{site.contact.email}</a>
                 </li>

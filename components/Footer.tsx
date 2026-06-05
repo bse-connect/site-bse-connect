@@ -27,7 +27,6 @@ export function Footer() {
             <h2 className="mb-3 text-xs font-medium uppercase tracking-[0.12em] text-ink-muted">Contact</h2>
             <ul className="space-y-2 text-sm text-ink-faint">
               <li><a href={"mailto:" + site.contact.email} className="hover:text-ink">{site.contact.email}</a></li>
-              <li><a href={site.contact.phoneHref} className="hover:text-ink">{site.contact.phone}</a></li>
               <li>{site.contact.area}</li>
             </ul>
           </div>

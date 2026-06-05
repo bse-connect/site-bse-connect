@@ -5,9 +5,7 @@ export const site = {
   description:
     "Installateur de sûreté électronique et courants faibles en Île-de-France : contrôle d'accès, vidéoprotection, intrusion, câblage. En direct comme en sous-traitance, de l'étude à la recette.",
   contact: {
-    phone: "06 59 89 51 22",
-    phoneHref: "tel:+33659895122",
-    email: "lysandre@bseconnect.com",
+    email: "contact@bseconnect.com",
     street: "5 rue du Verger",
     postalCode: "77860",
     city: "Saint-Germain-sur-Morin",

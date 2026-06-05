@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --font-sora:'Sora', system-ui, sans-serif;
+  --font-inter:'Inter', system-ui, sans-serif;
+}
+html{ scroll-behavior:smooth; }
+body{ @apply bg-navy-900 text-ink font-sans antialiased; }
+::selection{ background:#2e8fe0; color:#fff; }
+
+.container-bse{ @apply mx-auto w-full max-w-content px-6; }
+
+.skip-link:focus{ @apply not-sr-only fixed left-4 top-4 z-[100] rounded-md bg-brand-blue px-4 py-2 text-white; }
+:focus-visible{ outline:2px solid #49a4f0; outline-offset:3px; border-radius:4px; }
+
+.eco-wire{ stroke-dasharray:1.5 7; animation:eco-flow 3.4s linear infinite; }
+@keyframes eco-flow{ to{ stroke-dashoffset:-51; } }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  .eco-wire{ animation:none; }
+}

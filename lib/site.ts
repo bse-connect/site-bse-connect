@@ -118,7 +118,6 @@ export const metiers: Metier[] = [
 
 export const brandsHighlight = [
   "TIL Technologies / Hirsch",
-  "Sécurité Système",
   "Genetec",
   "Axis",
   "Hikvision",
@@ -128,7 +127,7 @@ export const brandsHighlight = [
 ];
 
 export const brandsAll = [
-  "TIL Technologies / Hirsch", "Sécurité Système", "Axis", "Hikvision", "Hanwha Vision",
+  "TIL Technologies / Hirsch", "Axis", "Hikvision", "Hanwha Vision",
   "i-PRO", "Bosch", "Avigilon", "Genetec", "Milestone", "Aritech", "RISCO", "Ajax",
   "STid", "HID", "Salto", "Automatic Systems", "Castel", "Aiphone", "2N", "Legrand",
   "Schneider Electric",

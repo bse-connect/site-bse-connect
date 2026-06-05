@@ -35,8 +35,8 @@ export default function Contact() {
                   <a href={"mailto:" + site.contact.email} className="text-ink hover:text-brand-bright">{site.contact.email}</a>
                 </li>
                 <li>
-                  <div className="text-ink-faint">Adresse</div>
-                  <div className="text-ink">{site.contact.street}, {site.contact.postalCode} {site.contact.city}</div>
+                  <div className="text-ink-faint">Secteur</div>
+                  <div className="text-ink">{site.contact.city} (77)</div>
                 </li>
                 <li>
                   <div className="text-ink-faint">Zone d&apos;intervention</div>

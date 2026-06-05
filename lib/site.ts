@@ -3,7 +3,7 @@ export const site = {
   baseline: "Systèmes connectés · Sûreté · Supervision",
   url: "https://bseconnect.fr",
   description:
-    "Installateur de sûreté électronique et courants faibles en Île-de-France : contrôle d'accès, vidéosurveillance, intrusion, câblage. En direct comme en sous-traitance, de l'étude à la recette.",
+    "Installateur de sûreté électronique et courants faibles en Île-de-France : contrôle d'accès, vidéoprotection, intrusion, câblage. En direct comme en sous-traitance, de l'étude à la recette.",
   contact: {
     phone: "06 59 89 51 22",
     phoneHref: "tel:+33659895122",
@@ -52,34 +52,35 @@ export const metiers: Metier[] = [
     slug: "controle-d-acces",
     icon: "access",
     title: "Contrôle d'accès",
-    tagline: "Du simple accès au multi-portes.",
+    tagline: "Du cylindre connecté à la gestion des flux piétons et véhicules.",
     intro:
-      "Installations de contrôle d'accès pour bâtiments professionnels, de l'accès isolé au système multi-portes et multi-niveaux, y compris en site occupé.",
+      "Nous concevons et posons des solutions de contrôle d'accès adaptées à chaque site : du cylindre électronique autonome ou connecté à la gestion des flux piétons et véhicules, jusqu'au contrôle d'accès filaire multi-portes.",
     items: [
-      "Lecteurs de badges, boutons poussoirs, ventouses, gâches",
-      "Coffrets, UTL, modules de porte, déclencheurs manuels",
-      "Tourniquets piétons sécurisés",
-      "Interfaces avec les automatismes existants",
-      "Essais fonctionnels et PV de recette",
+      "Cylindres et serrures électroniques, autonomes (offline) ou connectés (online)",
+      "Gestion des flux piétons : tourniquets, tripodes, portillons et sas sécurisés",
+      "Gestion des accès véhicules : barrières levantes, bornes escamotables, portails",
+      "Contrôle d'accès filaire : lecteurs, badges, UTL, ventouses, gâches, déclencheurs",
+      "Interfaçage avec l'existant, essais fonctionnels et PV de recette",
     ],
     engage:
-      "Une pose propre et repérée, adaptée au fonctionnement réel du site, avec des essais documentés.",
+      "Des accès fiables et lisibles, du badge à la barrière, pensés pour le fonctionnement réel et la sécurité du site.",
   },
   {
     slug: "videosurveillance",
     icon: "video",
     title: "Vidéosurveillance",
-    tagline: "De la caméra à la recette des vues.",
+    tagline: "Des systèmes de vidéoprotection intelligents, pas juste des caméras.",
     intro:
-      "Pose, raccordement et mise en service de caméras IP intérieures et extérieures, du besoin ponctuel au projet complet de vidéoprotection.",
+      "Nous déployons des systèmes de vidéoprotection complets, de la caméra IP à l'exploitation : analyse d'image, détection d'intrusion par l'image et lecture automatisée de plaques.",
     items: [
-      "Pose de caméras et de supports",
-      "Boîtes de jonction, tirage RJ45, raccordement réseau",
-      "Repérage, tests, vérification des vues",
-      "Documents de recette",
+      "Caméras IP haute définition, intérieures, extérieures et spécialisées",
+      "Analyse d'image / IA : levée de doute, comptage, franchissement de zone",
+      "Détection d'intrusion périmétrique par l'image",
+      "Lecture automatisée de plaques d'immatriculation (LAPI / LPR)",
+      "Enregistreurs, stockage, supervision et recette des vues",
     ],
     engage:
-      "Des champs de vision vérifiés, un câblage soigné et une installation pensée pour l'exploitation.",
+      "Une vidéoprotection pensée pour l'exploitation et la levée de doute — pas un simple alignement de caméras.",
   },
   {
     slug: "intrusion-interphonie",
@@ -101,17 +102,18 @@ export const metiers: Metier[] = [
     slug: "courants-faibles-cablage",
     icon: "cabling",
     title: "Courants faibles & câblage",
-    tagline: "La base d'une installation durable — VRD inclus.",
+    tagline: "Audit, qualification de câblage et génie civil.",
     intro:
-      "L'ensemble des travaux de courants faibles nécessaires à vos installations de sûreté — et, quand le chantier l'exige, les travaux annexes de VRD.",
+      "Au-delà de la pose, nous maîtrisons la chaîne courants faibles de bout en bout : audit d'installations existantes, qualification de câblage, et génie civil pour les réseaux enterrés.",
     items: [
-      "Tirage de câbles, cheminements, goulottes, gaines, fourreaux",
-      "Tranchées et VRD ponctuel",
-      "Repérage, sertissage, raccordement de coffrets et de baies",
-      "Nettoyage et finitions de chantier",
+      "Audit et diagnostic d'installations existantes",
+      "Câblage VDI : tirage, repérage, sertissage, qualification et recette de câblage",
+      "Génie civil : tranchées, pose de fourreaux enterrés, chambres de tirage",
+      "Raccordement de baies et de coffrets, brassage",
+      "Repérage, plans de recolement et DOE",
     ],
     engage:
-      "Nous prenons en charge la partie terrain — souvent la plus déterminante — pour une installation propre et durable.",
+      "Une infrastructure courants faibles fiable, mesurée et documentée — la base d'installations de sûreté durables.",
   },
 ];
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const diff = [
   "La réactivité et la proximité d'une entreprise à taille humaine.",
-  "Une vraie expertise terrain : pas seulement la pose d'équipements, mais aussi le câblage, les cheminements et le VRD qui fiabilisent une installation.",
+  "Une vraie expertise terrain : pas seulement la pose d'équipements, mais aussi le câblage, les cheminements et le génie civil qui fiabilisent une installation.",
   "Une exigence forte sur la qualité de pose, le repérage et les finitions.",
   "Le sérieux documentaire : DOE, PV de recette, comptes-rendus d'intervention.",
   "La capacité à travailler en direct comme en sous-traitance.",
@@ -41,9 +41,9 @@ export default function Entreprise() {
             </p>
             <h3 className="mt-10 font-display text-xl font-semibold">Notre organisation</h3>
             <p className="mt-3 text-ink-muted">
-              À taille humaine mais structurée : un dirigeant, une assistante de direction (administratif, devis,
-              fournisseurs, formations et habilitations, préparation comptable), des apprentis, et des renforts ou
-              sous-traitants selon les besoins chantier.
+              Une organisation à taille humaine et structurée, qui réunit la direction, un pôle administratif (suivi des
+              devis et des fournisseurs, gestion des formations et des habilitations, préparation comptable), des équipes
+              de terrain et des apprentis en formation. Selon les chantiers, nous mobilisons les renforts nécessaires.
             </p>
             <h3 className="mt-10 font-display text-xl font-semibold">Montée en qualification</h3>
             <p className="mt-3 text-ink-muted">

@@ -111,7 +111,7 @@ export default function Home() {
                 <div className="mb-4 h-1 w-14 rounded bg-brand-green" />
                 <h2 className="font-display text-2xl font-semibold sm:text-3xl">L'offre complète, jusqu'au moindre fourreau.</h2>
                 <p className="mt-3 text-ink-muted">
-                  De l'étude terrain à la recette, nous prenons aussi en charge les travaux annexes — VRD ponctuel, tranchées, génie civil — quand le chantier l'exige. Un seul interlocuteur, une installation propre et durable.
+                  De l'étude terrain à la recette, nous prenons aussi en charge les travaux annexes — voirie, tranchées et génie civil — quand le chantier l'exige. Un seul interlocuteur, une installation propre et durable.
                 </p>
               </div>
               <Button href="/contact" variant="ghost">Parler de votre projet</Button>

@@ -54,11 +54,12 @@ export const metiers: Metier[] = [
     title: "Contrôle d'accès",
     tagline: "Du cylindre connecté à la gestion des flux piétons et véhicules.",
     intro:
-      "Nous concevons et posons des solutions de contrôle d'accès adaptées à chaque site : du cylindre électronique autonome ou connecté à la gestion des flux piétons et véhicules, jusqu'au contrôle d'accès filaire multi-portes.",
+      "Nous concevons et posons des solutions de contrôle d'accès adaptées à chaque site : du cylindre électronique autonome ou connecté à la gestion des flux piétons et véhicules, jusqu'au contrôle d'accès filaire multi-portes, sans oublier la sûreté périmétrique.",
     items: [
       "Cylindres et serrures électroniques, autonomes (offline) ou connectés (online)",
       "Gestion des flux piétons : tourniquets, tripodes, portillons et sas sécurisés",
       "Gestion des accès véhicules : barrières levantes, bornes escamotables, portails",
+      "Sûreté périmétrique : barrières infrarouges, couplées ou non à des caméras thermiques",
       "Contrôle d'accès filaire : lecteurs, badges, UTL, ventouses, gâches, déclencheurs",
       "Interfaçage avec l'existant, essais fonctionnels et PV de recette",
     ],

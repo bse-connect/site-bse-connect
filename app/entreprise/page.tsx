@@ -35,7 +35,7 @@ export default function Entreprise() {
           <Reveal>
             <h2 className="font-display text-2xl font-semibold">Qui sommes-nous</h2>
             <p className="mt-4 text-ink-muted">
-              Jeune mais structurée, BSE Connect est dirigée par Lysandre Bavoux et s'appuie sur une organisation claire :
+              Jeune mais structurée, BSE Connect s'appuie sur une organisation claire :
               suivi administratif rigoureux, sécurité chantier, procédures internes et démarche qualité. Nous intervenons
               en direct client comme en sous-traitance pour des donneurs d'ordre structurés.
             </p>

@@ -27,9 +27,9 @@ const cases = [
     desc: "Vidéosurveillance, contrôle d'accès et câblage RJ45 déployés site par site sur un même réseau, avec une logique de standardisation.",
   },
   {
-    tag: "Projet phare · équipement physique",
-    title: "Tourniquets piétons sécurisés",
-    desc: "Fourniture, pose et mise en service : boîtiers d'intégration, croix de scellement, déverrouillage pompiers, alimentation, tirage de câbles, lecteurs de badges, raccordement, réglages, essais, PV de recette et DOE simplifié.",
+    tag: "Projet phare · migration multi-sites",
+    title: "Migration de contrôle d'accès et d'intrusion sur plusieurs sites",
+    desc: "Reprise et migration des systèmes de contrôle d'accès et d'intrusion d'un parc multi-sites, sans interruption d'exploitation : audit de l'existant, bascule progressive, reprise des badges et des centrales, essais et recette. La sensibilité des installations imposait une discrétion absolue à chaque étape.",
   },
 ];
 

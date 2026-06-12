@@ -7,6 +7,7 @@ const cards = [
     src: "/photos/controle-acces-lecteur-qr.webp",
     alt: "Lecture d'un badge sur un lecteur mural",
     className: "absolute left-0 top-[6%] z-20 aspect-[3/4] w-[44%] rotate-[-4deg]",
+    position: "object-[26%_50%]",
     float: 8,
     duration: 7,
   },
@@ -58,7 +59,7 @@ export function HeroCollage({ className = "" }: { className?: string }) {
               alt={c.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 80vw"
-              className="object-cover saturate-[0.9]"
+              className={"object-cover saturate-[0.9] " + ((c as { position?: string }).position || "object-center")}
             />
             <div className="absolute inset-0 bg-navy-900/20" />
           </motion.div>

@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact & devis",
-  description:
-    "Un projet de sûreté à chiffrer ? Contactez BSE Connect en Île-de-France. Réponse rapide, étude sérieuse, devis clair.",
-};
+export const metadata = pageMeta(
+  "Contact & devis",
+  "Un projet de sûreté à chiffrer ? Contactez BSE Connect en Île-de-France. Réponse rapide, étude sérieuse, devis clair.",
+  "/contact"
+);
 
 export default function Contact() {
   return (

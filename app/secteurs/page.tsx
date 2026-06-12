@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { secteurs } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Secteurs d'intervention",
-  description:
-    "Tertiaire, sites sensibles, institutionnel, industriel, ERP et bâtiments multi-occupants : des environnements exigeants en Île-de-France.",
-};
+export const metadata = pageMeta(
+  "Secteurs d'intervention",
+  "Tertiaire, sites sensibles, institutionnel, industriel, ERP et bâtiments multi-occupants : des environnements exigeants en Île-de-France.",
+  "/secteurs"
+);
 
 export default function Secteurs() {
   return (

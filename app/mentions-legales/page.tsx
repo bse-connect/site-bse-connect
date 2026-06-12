@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Mentions légales",
-  description: "Mentions légales et politique de confidentialité de BSE Connect.",
-};
+export const metadata = pageMeta(
+  "Mentions légales",
+  "Mentions légales et politique de confidentialité de BSE Connect.",
+  "/mentions-legales"
+);
 
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
   return (

@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
+
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-inter", display: "swap" });
+const sora = Sora({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-sora", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -19,7 +23,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
   },
-  alternates: { canonical: site.url },
+  alternates: { canonical: "/" },
 };
 
 const jsonLd = {
@@ -42,7 +46,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={inter.variable + " " + sora.variable}>
       <body>
         <a href="#contenu" className="skip-link">Aller au contenu</a>
         <Header />

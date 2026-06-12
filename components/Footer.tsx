@@ -21,6 +21,9 @@ export function Footer() {
                   <Link href={"/metiers/" + m.slug} className="hover:text-ink">{m.title}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/technologies" className="hover:text-ink">Technologies maîtrisées</Link>
+              </li>
             </ul>
           </div>
           <div>

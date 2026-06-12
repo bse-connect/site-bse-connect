@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { Container, Button } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icons";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Réalisations",
-  description:
-    "Exemples représentatifs de projets de sûreté électronique, anonymisés : sous-traitance gros tertiaire, site institutionnel, réseau multi-sites, tourniquets sécurisés.",
-};
+export const metadata = pageMeta(
+  "Réalisations",
+  "Exemples représentatifs de projets de sûreté électronique, anonymisés : sous-traitance gros tertiaire, site institutionnel, réseau multi-sites, tourniquets sécurisés.",
+  "/realisations"
+);
 
 const cases = [
   {

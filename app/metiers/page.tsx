@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icons";
 import { metiers } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Nos métiers",
-  description:
-    "Contrôle d'accès, vidéosurveillance, intrusion & interphonie, courants faibles & câblage : nos quatre expertises en sûreté électronique.",
-};
+export const metadata = pageMeta(
+  "Nos métiers",
+  "Contrôle d'accès, vidéosurveillance, intrusion & interphonie, courants faibles & câblage : nos quatre expertises en sûreté électronique.",
+  "/metiers"
+);
 
 export default function Metiers() {
   return (

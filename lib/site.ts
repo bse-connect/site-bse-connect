@@ -35,6 +35,8 @@ export const nav = [
   { href: "/contact", label: "Contact" },
 ];
 
+export type MetierImage = { src: string; alt: string; caption: string };
+
 export type Metier = {
   slug: string;
   icon: string;
@@ -43,6 +45,9 @@ export type Metier = {
   intro: string;
   items: string[];
   engage: string;
+  image?: string;
+  imageAlt?: string;
+  gallery?: MetierImage[];
 };
 
 export const metiers: Metier[] = [
@@ -63,6 +68,30 @@ export const metiers: Metier[] = [
     ],
     engage:
       "Des accès fiables et lisibles, du badge à la barrière, pensés pour le fonctionnement réel et la sécurité du site.",
+    image: "/photos/controle-acces-lecteur-qr.webp",
+    imageAlt: "Badge présenté sous un lecteur mural à lecture QR code",
+    gallery: [
+      {
+        src: "/photos/controle-acces-tourniquets.webp",
+        alt: "Couloirs rapides vitrés dans un hall d'entreprise",
+        caption: "Flux piétons : couloirs rapides, tripodes et portillons",
+      },
+      {
+        src: "/photos/controle-acces-pmr.webp",
+        alt: "Passage PMR à battant vitré dans un hall d'accueil",
+        caption: "Accessibilité : passages PMR intégrés aux lignes de contrôle",
+      },
+      {
+        src: "/photos/acces-vehicules-perimetrique.webp",
+        alt: "Entrée de site avec portail, bornes escamotables et tourniquet toute hauteur",
+        caption: "Périmétrique : portail, bornes anti-bélier et tourniquet toute hauteur",
+      },
+      {
+        src: "/photos/controle-acces-speed-gates.webp",
+        alt: "Couloirs de contrôle d'accès à battants vitrés",
+        caption: "Des équipements intégrés à l'architecture du hall",
+      },
+    ],
   },
   {
     slug: "videosurveillance",

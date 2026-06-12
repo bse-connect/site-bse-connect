@@ -67,7 +67,9 @@ export default function Home() {
             {brandsHighlight.map((b) => (
               <span key={b} className="font-display text-sm font-semibold text-ink-muted">{b}</span>
             ))}
-            <span className="font-display text-sm font-semibold text-ink-faint">+ autres</span>
+            <Link href="/technologies" className="font-display text-sm font-semibold text-brand-bright transition-colors hover:text-ink">
+              + autres
+            </Link>
           </div>
         </Container>
       </div>

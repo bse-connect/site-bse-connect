@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "L'entreprise",
-  description:
-    "BSE Connect, installateur de sûreté électronique et courants faibles en Île-de-France : entreprise de terrain, sérieuse, réactive, en direct comme en sous-traitance.",
-};
+export const metadata = pageMeta(
+  "L'entreprise",
+  "BSE Connect, installateur de sûreté électronique et courants faibles en Île-de-France : entreprise de terrain, sérieuse, réactive, en direct comme en sous-traitance.",
+  "/entreprise"
+);
 
 const diff = [
   "La réactivité et la proximité d'une entreprise à taille humaine.",

@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icons";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Qualité, sécurité & confidentialité",
-  description:
-    "Qualité d'exécution, sécurité chantier (DUERP, EPI, habilitations), confidentialité et assurance décennale : le sérieux d'une entreprise à taille humaine.",
-};
+export const metadata = pageMeta(
+  "Qualité, sécurité & confidentialité",
+  "Qualité d'exécution, sécurité chantier (DUERP, EPI, habilitations), confidentialité et assurance décennale : le sérieux d'une entreprise à taille humaine.",
+  "/qualite"
+);
 
 const blocks = [
   { icon: "shield", title: "Qualité d'exécution", desc: "Pose propre, repérage clair, étiquetage, finitions soignées, comptes-rendus d'intervention, essais et recette, DOE lorsque demandé." },

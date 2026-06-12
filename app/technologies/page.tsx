@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { brandsAll } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Technologies maîtrisées",
-  description:
-    "Une expertise indépendante, multi-marques : contrôle d'accès, vidéosurveillance, intrusion, interphonie et courants faibles. Nous privilégions la solution adaptée à votre site.",
-};
+export const metadata = pageMeta(
+  "Technologies maîtrisées",
+  "Une expertise indépendante, multi-marques : contrôle d'accès, vidéosurveillance, intrusion, interphonie et courants faibles. Nous privilégions la solution adaptée à votre site.",
+  "/technologies"
+);
 
 export default function Technologies() {
   return (

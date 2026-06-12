@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container, Button } from "@/components/ui";
@@ -6,6 +7,7 @@ import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icons";
 import { metiers } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return metiers.map((m) => ({ slug: m.slug }));
@@ -14,7 +16,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const m = metiers.find((x) => x.slug === params.slug);
   if (!m) return {};
-  return { title: m.title, description: m.intro };
+  return pageMeta(m.title, m.intro, "/metiers/" + m.slug);
 }
 
 export default function MetierPage({ params }: { params: { slug: string } }) {
@@ -23,7 +25,7 @@ export default function MetierPage({ params }: { params: { slug: string } }) {
   const others = metiers.filter((x) => x.slug !== m.slug);
   return (
     <>
-      <PageHero eyebrow="Nos métiers" title={m.title} intro={m.intro} />
+      <PageHero eyebrow="Nos métiers" title={m.title} intro={m.intro} image={m.image} imageAlt={m.imageAlt} />
       <section className="py-20">
         <Container className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <Reveal>
@@ -57,6 +59,35 @@ export default function MetierPage({ params }: { params: { slug: string } }) {
           </Reveal>
         </Container>
       </section>
+      {m.gallery && m.gallery.length > 0 && (
+        <section className="border-t border-white/10 pb-24 pt-16">
+          <Container>
+            <Reveal>
+              <h2 className="font-display text-2xl font-semibold">En images</h2>
+              <p className="mt-2 text-sm text-ink-faint">Visuels d&apos;illustration.</p>
+            </Reveal>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              {m.gallery.map((g, i) => (
+                <Reveal key={g.src} delay={i * 0.07}>
+                  <figure className="group overflow-hidden rounded-xl2 border border-white/10 bg-surface">
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <Image
+                        src={g.src}
+                        alt={g.alt}
+                        fill
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-navy-900/15 transition-opacity duration-300 group-hover:opacity-0" />
+                    </div>
+                    <figcaption className="px-5 py-4 text-sm text-ink-muted">{g.caption}</figcaption>
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
     </>
   );
 }

@@ -1,9 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container, Eyebrow, Button } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icons";
 import { EcosystemMotif } from "@/components/EcosystemMotif";
+import { HeroCollage } from "@/components/HeroCollage";
 import { metiers, brandsHighlight, secteurs } from "@/lib/site";
+
+const secteurImages: Record<string, string> = {
+  "Tertiaire": "/photos/controle-acces-tourniquets.webp",
+  "Sites sensibles": "/photos/intrusion-barrieres-infrarouges.webp",
+  "Institutionnel": "/photos/acces-vehicules-perimetrique.webp",
+  "Industriel": "/photos/intrusion-detection-exterieure.webp",
+  "ERP / site occupé": "/photos/controle-acces-pmr.webp",
+  "Multi-occupants": "/photos/interphonie-platine.webp",
+};
 
 const trust = [
   "Démarche Qualifelec CFMGTI en cours",
@@ -26,8 +37,9 @@ export default function Home() {
           className="pointer-events-none absolute inset-0"
           style={{ background: "radial-gradient(620px 420px at 86% -8%, rgba(46,143,224,0.18), transparent 60%)" }}
         />
-        <EcosystemMotif className="pointer-events-none absolute right-[-30px] top-24 hidden w-[58%] text-brand-blue opacity-50 [mask-image:linear-gradient(90deg,transparent,#000_44%)] md:block" />
+        <EcosystemMotif className="pointer-events-none absolute right-[-30px] top-24 hidden w-[58%] text-brand-blue opacity-30 [mask-image:linear-gradient(90deg,transparent,#000_44%)] md:block" />
         <Container className="relative">
+          <HeroCollage className="absolute right-0 top-2 hidden h-[400px] w-[510px] xl:block" />
           <Reveal><Eyebrow tricolor>Sûreté électronique &amp; courants faibles · Île-de-France</Eyebrow></Reveal>
           <Reveal delay={0.08}>
             <h1 className="mt-6 max-w-[16ch] font-display text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
@@ -35,7 +47,7 @@ export default function Home() {
             </h1>
           </Reveal>
           <Reveal delay={0.16}>
-            <p className="mt-6 max-w-[56ch] text-lg text-ink-muted">
+            <p className="mt-6 max-w-[46ch] text-lg text-ink-muted">
               Contrôle d'accès, vidéosurveillance, intrusion et courants faibles pour les sites tertiaires, institutionnels et sensibles. En direct comme en sous-traitance, de l'étude terrain à la recette.
             </p>
           </Reveal>
@@ -87,16 +99,30 @@ export default function Home() {
               <Reveal key={m.slug} delay={i * 0.08}>
                 <Link
                   href={"/metiers/" + m.slug}
-                  className="group block h-full rounded-xl2 border border-white/10 bg-surface p-6 transition-all duration-200 hover:-translate-y-1.5 hover:border-brand-blue hover:bg-surface-light"
+                  className="group relative flex h-full min-h-[320px] flex-col justify-end overflow-hidden rounded-xl2 border border-white/10 bg-surface transition-all duration-200 hover:-translate-y-1.5 hover:border-brand-blue"
                 >
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-[11px] bg-brand-blue/10 text-brand-bright transition-colors group-hover:bg-brand-green/10 group-hover:text-brand-green">
-                    <Icon name={m.icon} className="h-6 w-6" />
+                  {m.cardImage && (
+                    <>
+                      <Image
+                        src={m.cardImage}
+                        alt=""
+                        fill
+                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover opacity-50 saturate-[0.85] transition duration-300 group-hover:scale-105 group-hover:opacity-65"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/55 to-navy-900/15" />
+                    </>
+                  )}
+                  <div className="relative p-6">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-[11px] bg-navy-900/60 text-brand-bright backdrop-blur-sm transition-colors group-hover:text-brand-green">
+                      <Icon name={m.icon} className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-display text-lg font-semibold">{m.title}</h3>
+                    <p className="mt-2 text-sm text-ink-muted">{m.tagline}</p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright">
+                      En savoir plus <Icon name="arrow" className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </span>
                   </div>
-                  <h3 className="font-display text-lg font-semibold">{m.title}</h3>
-                  <p className="mt-2 text-sm text-ink-muted">{m.tagline}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright">
-                    En savoir plus <Icon name="arrow" className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                  </span>
                 </Link>
               </Reveal>
             ))}
@@ -108,15 +134,25 @@ export default function Home() {
       <section className="pb-24">
         <Container>
           <Reveal>
-            <div className="flex flex-wrap items-center justify-between gap-8 rounded-[18px] border border-white/10 bg-gradient-to-r from-navy-700 to-navy-800 p-10">
-              <div className="max-w-[60ch]">
-                <div className="mb-4 h-1 w-14 rounded bg-brand-green" />
-                <h2 className="font-display text-2xl font-semibold sm:text-3xl">L'offre complète, jusqu'au moindre fourreau.</h2>
-                <p className="mt-3 text-ink-muted">
-                  De l'étude terrain à la recette, nous prenons aussi en charge les travaux annexes — voirie, tranchées et génie civil — quand le chantier l'exige. Un seul interlocuteur, une installation propre et durable.
-                </p>
+            <div className="relative overflow-hidden rounded-[18px] border border-white/10">
+              <Image
+                src="/photos/ambiance-fibre-reseau.webp"
+                alt=""
+                fill
+                sizes="(min-width: 1200px) 1140px, 100vw"
+                className="object-cover opacity-35"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-navy-800/95 via-navy-800/80 to-navy-800/55" />
+              <div className="relative flex flex-wrap items-center justify-between gap-8 p-10">
+                <div className="max-w-[60ch]">
+                  <div className="mb-4 h-1 w-14 rounded bg-brand-green" />
+                  <h2 className="font-display text-2xl font-semibold sm:text-3xl">L'offre complète, jusqu'au moindre fourreau.</h2>
+                  <p className="mt-3 text-ink-muted">
+                    De l'étude terrain à la recette, nous prenons aussi en charge les travaux annexes — voirie, tranchées et génie civil — quand le chantier l'exige. Un seul interlocuteur, une installation propre et durable.
+                  </p>
+                </div>
+                <Button href="/contact" variant="ghost">Parler de votre projet</Button>
               </div>
-              <Button href="/contact" variant="ghost">Parler de votre projet</Button>
             </div>
           </Reveal>
         </Container>
@@ -133,9 +169,23 @@ export default function Home() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {secteurs.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.06}>
-                <div className="h-full rounded-xl2 border border-white/10 bg-navy-800 p-6">
-                  <h3 className="font-display text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm text-ink-muted">{s.desc}</p>
+                <div className="group relative h-full overflow-hidden rounded-xl2 border border-white/10 bg-navy-800 p-6 transition-colors hover:border-brand-blue/60">
+                  {secteurImages[s.title] && (
+                    <>
+                      <Image
+                        src={secteurImages[s.title]}
+                        alt=""
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover opacity-[0.18] saturate-[0.7] transition duration-300 group-hover:scale-105 group-hover:opacity-30"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-800 via-navy-800/60 to-navy-800/30" />
+                    </>
+                  )}
+                  <div className="relative">
+                    <h3 className="font-display text-lg font-semibold">{s.title}</h3>
+                    <p className="mt-2 text-sm text-ink-muted">{s.desc}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -164,8 +214,16 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-white/10 py-28">
-        <Container className="text-center">
+      <section className="relative overflow-hidden border-t border-white/10 py-28">
+        <Image
+          src="/photos/supervision-centre.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="pointer-events-none object-cover opacity-20 saturate-[0.8]"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-900/70 to-navy-900" />
+        <Container className="relative text-center">
           <Reveal>
             <h2 className="mx-auto max-w-[18ch] font-display text-3xl font-bold sm:text-4xl lg:text-5xl">Un projet de sûreté à chiffrer ?</h2>
             <p className="mx-auto mt-4 max-w-[40ch] text-lg text-ink-muted">Parlons-en. Réponse rapide, étude sérieuse, devis clair.</p>

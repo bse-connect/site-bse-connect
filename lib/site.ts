@@ -47,6 +47,7 @@ export type Metier = {
   engage: string;
   image?: string;
   imageAlt?: string;
+  cardImage?: string;
   gallery?: MetierImage[];
 };
 
@@ -70,6 +71,7 @@ export const metiers: Metier[] = [
       "Des accès fiables et lisibles, du badge à la barrière, pensés pour le fonctionnement réel et la sécurité du site.",
     image: "/photos/controle-acces-lecteur-qr.webp",
     imageAlt: "Badge présenté sous un lecteur mural à lecture QR code",
+    cardImage: "/photos/controle-acces-speed-gates.webp",
     gallery: [
       {
         src: "/photos/controle-acces-tourniquets.webp",
@@ -109,6 +111,21 @@ export const metiers: Metier[] = [
     ],
     engage:
       "Une vidéoprotection pensée pour l'exploitation et la levée de doute — pas un simple alignement de caméras.",
+    image: "/photos/videosurveillance-camera-dome.webp",
+    imageAlt: "Caméra dôme de vidéosurveillance sur une façade moderne",
+    cardImage: "/photos/videosurveillance-camera-dome.webp",
+    gallery: [
+      {
+        src: "/photos/videosurveillance-analyse-ia.webp",
+        alt: "Vue de vidéoprotection avec cadres de détection et identifiants de suivi",
+        caption: "Analyse d'image : détection, suivi et levée de doute",
+      },
+      {
+        src: "/photos/supervision-centre.webp",
+        alt: "Mur d'écrans de supervision affichant des flux de vidéoprotection",
+        caption: "Supervision : exploitation des flux et cartographie",
+      },
+    ],
   },
   {
     slug: "intrusion-interphonie",
@@ -125,6 +142,31 @@ export const metiers: Metier[] = [
     ],
     engage:
       "Une installation fiable et facile à exploiter, intégrée au reste de votre système de sûreté.",
+    image: "/photos/intrusion-detection-exterieure.webp",
+    imageAlt: "Détection extérieure couvrant une cour logistique au crépuscule",
+    cardImage: "/photos/intrusion-detection-exterieure.webp",
+    gallery: [
+      {
+        src: "/photos/intrusion-barrieres-infrarouges.webp",
+        alt: "Colonnes de barrières infrarouges le long d'une clôture de site industriel",
+        caption: "Périmétrique : barrières infrarouges en continuité, plus hautes que la clôture",
+      },
+      {
+        src: "/photos/intrusion-clavier-alarme.webp",
+        alt: "Clavier d'alarme intrusion mural avec écran tactile",
+        caption: "Intrusion : centrales, claviers et organes de commande",
+      },
+      {
+        src: "/photos/interphonie-platine.webp",
+        alt: "Platine de rue multifonctions avec annuaire, clavier à code et lecteur de badge",
+        caption: "Interphonie : platines multifonctions (annuaire, code, badge)",
+      },
+      {
+        src: "/photos/interphonie-moniteur.webp",
+        alt: "Réponse sur moniteur intérieur de visiophonie à un comptoir d'accueil",
+        caption: "Visiophonie : voir qui sonne et ouvrir à distance",
+      },
+    ],
   },
   {
     slug: "courants-faibles-cablage",
@@ -142,6 +184,21 @@ export const metiers: Metier[] = [
     ],
     engage:
       "Une infrastructure courants faibles fiable, mesurée et documentée — la base d'installations de sûreté durables.",
+    image: "/photos/courants-faibles-baie-brassage.webp",
+    imageAlt: "Baie de brassage ouverte au câblage organisé et étiqueté",
+    cardImage: "/photos/courants-faibles-baie-brassage.webp",
+    gallery: [
+      {
+        src: "/photos/courants-faibles-brassage-fibre.webp",
+        alt: "Jarretières de fibre optique étiquetées raccordées à un tiroir optique",
+        caption: "Fibre et VDI : brassage repéré, qualifié et documenté",
+      },
+      {
+        src: "/photos/chantier-fourreaux-detail.webp",
+        alt: "Tranchée rectiligne avec fourreaux TPC et grillage avertisseur",
+        caption: "Génie civil : tranchées, fourreaux et chambres de tirage",
+      },
+    ],
   },
 ];
 

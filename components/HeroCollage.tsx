@@ -6,21 +6,21 @@ const cards = [
   {
     src: "/photos/controle-acces-lecteur-qr.webp",
     alt: "Lecture d'un badge sur un lecteur mural",
-    className: "absolute right-[210px] top-6 z-20 h-[300px] w-[230px] rotate-[-4deg]",
+    className: "absolute left-0 top-[6%] z-20 aspect-[3/4] w-[44%] rotate-[-4deg]",
     float: 8,
     duration: 7,
   },
   {
     src: "/photos/videosurveillance-camera-dome.webp",
     alt: "Caméra dôme sur façade",
-    className: "absolute right-0 top-0 z-10 h-[180px] w-[270px] rotate-[3deg]",
+    className: "absolute right-0 top-0 z-10 aspect-[3/2] w-[54%] rotate-[3deg]",
     float: 10,
     duration: 9,
   },
   {
     src: "/photos/supervision-centre.webp",
     alt: "Centre de supervision",
-    className: "absolute right-[30px] top-[220px] z-30 h-[150px] w-[240px] rotate-[2deg]",
+    className: "absolute bottom-0 right-[4%] z-30 aspect-[8/5] w-[50%] rotate-[2deg]",
     float: 6,
     duration: 8,
   },
@@ -29,7 +29,10 @@ const cards = [
 export function HeroCollage({ className = "" }: { className?: string }) {
   const reduce = useReducedMotion();
   return (
-    <div className={"pointer-events-none relative " + className} aria-hidden="true">
+    <div
+      className={"pointer-events-none relative aspect-[51/40] w-full " + className}
+      aria-hidden="true"
+    >
       {cards.map((c, i) => (
         <motion.div
           key={c.src}
@@ -54,10 +57,10 @@ export function HeroCollage({ className = "" }: { className?: string }) {
               src={c.src}
               alt={c.alt}
               fill
-              sizes="280px"
+              sizes="(min-width: 1024px) 40vw, 80vw"
               className="object-cover saturate-[0.9]"
             />
-            <div className="absolute inset-0 bg-navy-900/25" />
+            <div className="absolute inset-0 bg-navy-900/20" />
           </motion.div>
         </motion.div>
       ))}

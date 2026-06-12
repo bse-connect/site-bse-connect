@@ -39,33 +39,37 @@ export default function Home() {
         />
         <EcosystemMotif className="pointer-events-none absolute right-[-30px] top-24 hidden w-[58%] text-brand-blue opacity-30 [mask-image:linear-gradient(90deg,transparent,#000_44%)] md:block" />
         <Container className="relative">
-          <HeroCollage className="absolute right-0 top-2 hidden h-[400px] w-[510px] xl:block" />
-          <Reveal><Eyebrow tricolor>Sûreté électronique &amp; courants faibles · Île-de-France</Eyebrow></Reveal>
-          <Reveal delay={0.08}>
-            <h1 className="mt-6 max-w-[16ch] font-display text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-              Vos installations de sûreté, <span className="text-brand-bright">conçues et posées avec rigueur.</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={0.16}>
-            <p className="mt-6 max-w-[46ch] text-lg text-ink-muted">
-              Contrôle d'accès, vidéosurveillance, intrusion et courants faibles pour les sites tertiaires, institutionnels et sensibles. En direct comme en sous-traitance, de l'étude terrain à la recette.
-            </p>
-          </Reveal>
-          <Reveal delay={0.24}>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Button href="/contact">Demander un devis <Icon name="arrow" className="h-4 w-4" /></Button>
-              <Button href="/metiers" variant="ghost">Découvrir nos métiers</Button>
+          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <Reveal><Eyebrow tricolor>Sûreté électronique &amp; courants faibles · Île-de-France</Eyebrow></Reveal>
+              <Reveal delay={0.08}>
+                <h1 className="mt-6 max-w-[16ch] font-display text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
+                  Vos installations de sûreté, <span className="text-brand-bright">conçues et posées avec rigueur.</span>
+                </h1>
+              </Reveal>
+              <Reveal delay={0.16}>
+                <p className="mt-6 max-w-[46ch] text-lg text-ink-muted">
+                  Contrôle d'accès, vidéosurveillance, intrusion et courants faibles pour les sites tertiaires, institutionnels et sensibles. En direct comme en sous-traitance, de l'étude terrain à la recette.
+                </p>
+              </Reveal>
+              <Reveal delay={0.24}>
+                <div className="mt-9 flex flex-wrap gap-4">
+                  <Button href="/contact">Demander un devis <Icon name="arrow" className="h-4 w-4" /></Button>
+                  <Button href="/metiers" variant="ghost">Découvrir nos métiers</Button>
+                </div>
+              </Reveal>
+              <Reveal delay={0.3}>
+                <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-faint">
+                  {trust.map((t) => (
+                    <li key={t} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-brand-green" />{t}
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-faint">
-              {trust.map((t) => (
-                <li key={t} className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-brand-green" />{t}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
+            <HeroCollage className="mx-auto max-w-[520px]" />
+          </div>
         </Container>
       </section>
 
@@ -108,9 +112,9 @@ export default function Home() {
                         alt=""
                         fill
                         sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover opacity-50 saturate-[0.85] transition duration-300 group-hover:scale-105 group-hover:opacity-65"
+                        className="object-cover opacity-70 saturate-[0.9] transition duration-300 group-hover:scale-105 group-hover:opacity-85"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/55 to-navy-900/15" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/35 to-navy-900/5" />
                     </>
                   )}
                   <div className="relative p-6">
@@ -140,9 +144,9 @@ export default function Home() {
                 alt=""
                 fill
                 sizes="(min-width: 1200px) 1140px, 100vw"
-                className="object-cover opacity-35"
+                className="object-cover opacity-50"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-navy-800/95 via-navy-800/80 to-navy-800/55" />
+              <div className="absolute inset-0 bg-gradient-to-r from-navy-800/90 via-navy-800/70 to-navy-800/40" />
               <div className="relative flex flex-wrap items-center justify-between gap-8 p-10">
                 <div className="max-w-[60ch]">
                   <div className="mb-4 h-1 w-14 rounded bg-brand-green" />
@@ -177,9 +181,9 @@ export default function Home() {
                         alt=""
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover opacity-[0.18] saturate-[0.7] transition duration-300 group-hover:scale-105 group-hover:opacity-30"
+                        className="object-cover opacity-40 saturate-[0.8] transition duration-300 group-hover:scale-105 group-hover:opacity-55"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-navy-800 via-navy-800/60 to-navy-800/30" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-800 via-navy-800/50 to-navy-800/15" />
                     </>
                   )}
                   <div className="relative">

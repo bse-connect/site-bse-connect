@@ -39,7 +39,10 @@ export default function Mentions() {
             <p>Responsabilité civile décennale souscrite auprès de {l.insurer} — contrat « {l.insuranceContract} ». Activités garanties : terrassement, électricité-télécommunications, réseaux souterrains, télécommunication / vidéocommunication. Couverture : France métropolitaine et DROM.</p>
           </Block>
           <Block title="Hébergement">
-            <p>Vercel Inc. — adresse à compléter à la mise en ligne.</p>
+            <p>Vercel Inc. — 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com).</p>
+          </Block>
+          <Block title="Crédits visuels">
+            <p>Les photographies et visuels présents sur ce site sont des images d&apos;illustration.</p>
           </Block>
           <Block title="Données personnelles (RGPD)">
             <p>Les informations transmises via le formulaire de contact servent uniquement à répondre aux demandes ; elles ne sont ni cédées ni revendues. Conformément au RGPD, toute personne dispose d&apos;un droit d&apos;accès, de rectification et de suppression de ses données en écrivant à {site.contact.email}.</p>

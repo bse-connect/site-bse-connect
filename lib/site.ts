@@ -20,9 +20,9 @@ export const site = {
     immat: "02/04/2025",
     ape: "43.21A — Travaux d'installation électrique dans tous locaux",
     tva: "FR62 942 752 361",
-    director: "Lysandre Bavoux",
+    director: "le Président de BSE Connect",
     insurer: "SMABTP",
-    insuranceContract: "Global Constructeur n° K70439C / 1244000 / 001 657540/0",
+    insuranceContract: "Global Constructeur",
   },
 };
 

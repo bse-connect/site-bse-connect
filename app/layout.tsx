@@ -34,13 +34,6 @@ const jsonLd = {
   url: site.url,
   email: site.contact.email,
   areaServed: "Île-de-France",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: site.contact.street,
-    postalCode: site.contact.postalCode,
-    addressLocality: site.contact.city,
-    addressCountry: "FR",
-  },
   knowsAbout: ["Contrôle d'accès", "Vidéosurveillance", "Intrusion", "Courants faibles", "VDI"],
 };
 

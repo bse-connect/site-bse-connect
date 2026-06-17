@@ -27,7 +27,7 @@ export default function Mentions() {
         <Container className="max-w-3xl">
           <Block title="Éditeur du site">
             <p>BSE Connect — {l.forme}, au capital de {l.capital}.</p>
-            <p>Siège social : {site.contact.street}, {site.contact.postalCode} {site.contact.city}.</p>
+            <p>Siège social : {site.contact.postalCode} {site.contact.city} (Seine-et-Marne).</p>
             <p>SIREN : {l.siren} · SIRET (siège) : {l.siret}.</p>
             <p>{l.rcs} (immatriculée le {l.immat}).</p>
             <p>Code APE/NAF : {l.ape}.</p>
